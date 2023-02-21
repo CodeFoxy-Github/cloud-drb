@@ -152,21 +152,12 @@
       </div>
       <script>
       
-var links = [
-              "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=gwUy09",
-              "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=xFHLgpm",
-              "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=IbLqfo",
-              "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=jKDByI",
-            "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=Tzbft7",
-          "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=vNuauT",
-        "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=3tD61m",
-      "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw?e=XlNbdC"]
+var links = "https://xd8j6.sharepoint.com/:f:/s/Cloud/EnXEPzxfHr1MoO9yXaEYCBMB-MFAoqr_1grldXUZ_h1jKw"
               // get a random number between 0 and the number of links
-              var randIdx = Math.random() * links.length;
+              Math.random()
               // round it, so it can be used as array index
-              randIdx = parseInt(randIdx, 10);
               // construct the link to be opened
-              var link = links[randIdx];
+              var link = links + "?e=" + Math.random();
               let base64 = btoa(link);
               let base64url = base64
                 .replace(/\+/g, '-')
